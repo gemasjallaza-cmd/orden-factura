@@ -11,12 +11,12 @@ button{font:inherit;color:var(--tx);background:#151a4a;border:1px solid var(--li
 #msg{color:var(--tq);min-height:1.5em}a{color:var(--tq)}.mu{color:var(--mu)}small{display:block}
 .it{display:flex;gap:10px;background:#0a0d2c;border:1px solid var(--line);border-radius:14px;padding:10px;margin-bottom:8px}.it img{width:72px;height:72px;object-fit:cover;border-radius:10px;flex:none}.it.bad{border-color:var(--bad)}.it.skip{opacity:.55}
 .f{flex:1;min-width:0}.f small:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mu)}.r{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
-select,input{background:#070a24;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:8px;font:inherit;min-width:0;flex:1 1 90px}.wn{color:#fbbf24}.pv{color:var(--tq);word-break:break-all}.bad .pv{color:var(--bad)}
-</style></head><body><main>
+select,input{background:#070a24;color:var(--tx);border:1px solid var(--line);border-radius:10px;padding:8px;font:inherit;min-width:0;flex:1 1 90px}.wn{color:#fbbf24}.tx{font:12px/1.4 ui-monospace,monospace;color:var(--mu);white-space:pre-wrap;max-height:150px;overflow:auto;background:#070a24;padding:8px;border-radius:8px}details{margin-top:4px}summary{color:var(--mu);cursor:pointer;font-size:.85rem}.rt{min-height:36px;padding:6px 12px;font-size:.85rem;margin-top:6px}.pv{color:var(--tq);word-break:break-all}.bad .pv{color:var(--bad)}
+.it.rev{border-color:#fbbf24}.it img{cursor:zoom-in}#lb{position:fixed;inset:0;background:#000d;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9;padding:10px}#lb[hidden]{display:none}#lb img{max-width:100%;max-height:85vh;border-radius:10px;background:#fff}#lb p{color:#fff}</style></head><body><main>
 <h1>ORDEN <span>FACTURAS</span></h1><p class="sub">Ordena capturas de facturas y notas de venta por fecha, con el monto en el nombre.</p><p><button id="inst" hidden>📲 Instalar app</button></p>
 <div class="card"><div class="row"><button class="pri" id="pick">📁 Elegir carpeta</button><button id="scan" hidden>🔍 Leer imágenes</button></div><label class="row" style="gap:10px;margin-top:10px"><input type="checkbox" id="dup" checked style="flex:none;width:22px;height:22px"> Detectar duplicados</label><div class="bar" id="bar"><i></i></div><div id="msg"></div>
 <p class="mu" style="font-size:.85rem;margin-bottom:0">Funciona en Chrome o Edge de PC. La primera lectura necesita internet para bajar el lector (después queda guardado).</p></div>
 <div id="list"></div>
 <div class="card" id="go" hidden><label class="row" style="gap:10px"><input type="checkbox" id="mv" style="flex:none;width:22px;height:22px"> Mover (borra la imagen original de la carpeta). Sin marcar, solo se copian.</label>
 <p class="row"><button class="pri" id="apply">✅ Aplicar</button></p></div>
-</main><script src="parse.js"></script><script src="app.js"></script></body></html>
+</main><div id="lb" hidden><img id="lbi" alt=""><p>Toca para cerrar</p></div><script src="parse.js"></script><script src="app.js"></script></body></html>
